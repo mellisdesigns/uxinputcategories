@@ -1,0 +1,158 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    
+    <!--
+        Author: Mitch Ellis
+                mitch@mellisdesigns.com
+        Descri: Initial boiler plate from http://www.initializr.com/
+                A UX programming project about input sub categories.
+        Librar: jQuery, Modernizer, normalize.css
+    -->
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        
+        <!-- Materialize stylesheet for quick material layouts --> 
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- THE START OF OUR CONTENT -->
+        <header>
+            <!-- Using semantic elements helps us make our html easily accesible and readable to other developers -->
+            <nav class="top-nav">
+                <div class="container">
+                    <div class="nav-wrapper">
+                        <a href="#" class="brand-logo">Input with Sub Category</a>
+                    </div>
+                </div>
+            </nav>
+            
+        </header>
+        
+        <main>
+            <div class="container">
+                
+                <div class="row">
+                   
+                    <p class="flow-text">Sometimes we might require the user input to define a measurement. For example, say we want to have a user input a form of measurement. We first have an abritrary number like 250. This is how it might look.</p>
+                    
+                </div>
+                
+                 <!--
+                    EXAMPLE 1
+                -->
+                <div class="row">
+                
+                    <!-- An example of how we enter measurement at this current time. -->
+                    <p>How can make it easy to define a unit to the number</p>
+                    <div class="card-panel">
+                        <div class="row">
+                            <form class="col s12">
+                                <div class="input-field col s12">
+                                    <label for="product_weight_eg1">Product Weight</label>
+                                    <input id="product_weight_eg1" type="number" step="any" class="validate">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <div class="row">
+                    
+                    <p class="flow-text">Now we can think of ways to improve this. I have scripted a couple of examples where we include the facility to add the unit of measurement.</p>
+                    
+                </div>
+                
+                <!--
+                    EXAMPLE 2
+                -->
+                <div class="row">
+                    
+                    <p>Let use a standard side by side example. After the user adds the unit we assign focus to the unit input</p>
+                    
+                    <div class="card-panel">
+                        <div class="row">
+                            <form class="col s12">
+                                <div class="input-field col s7">
+                                    <label for="product_weight_eg2">Product Weight</label>
+                                    <input id="product_weight_eg2" type="number" step="any" class="validate">
+                                </div>
+                                
+                                <div class="input-field col s5">
+                                    <select>
+                                        <option value="" disabled selected>Select a unit</option>
+                                        <option value="1">kg</option>
+                                        <option value="2">g</option>
+                                        <option value="3">l</option>
+                                    </select>
+                                    <label>Unit Selection</label>
+                                </div>
+                                
+                            </form>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <!--
+                    EXAMPLE 3
+                -->
+                <div class="row">
+                    
+                    <p>We could also let the user type in the unit and extract it out of the value. For example if the user types "45 kg", we can automatically extract the unit</p>
+                    
+                    <div class="card-panel">
+                        <div class="row">
+                            <form class="col s12">
+                               
+                                <div class="input-field col s7">
+                                    <label for="product_weight_eg3">Product Weight</label>
+                                    <input id="product_weight_eg3" type="text" class="validate">
+                                </div>
+                                
+                                <div class="col s5">
+
+                                        <p class="flow-text truncate" data-id="label_eg3_unit">NA</p>
+
+                                </div>
+                                
+                            </form>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                
+            </div>
+        </main>
+        
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+        
+        <!-- Materialize javascript for quick material functionality --> 
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>
